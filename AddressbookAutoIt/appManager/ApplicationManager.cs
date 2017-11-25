@@ -16,10 +16,10 @@ namespace AddressbookAutoIt
         public ApplicationManager()
         {
             aux = new AutoItX3();
-            aux.Run(@"C:\FreeAddressBookPortable\AddressBook.exe");
+            aux.Run(@"D:\DQ\AB\AddressBook.exe", "",aux.SW_SHOW);
             aux.WinWait(WINTITLE);
             aux.WinActivate(WINTITLE);
-            aux.WinWaitActive(WINTITLE);
+            aux.WinWaitActive(WINTITLE,"",1);
 
             groupHelper = new GroupHelper(this);
         }
@@ -29,7 +29,7 @@ namespace AddressbookAutoIt
             //название окна
             //необяз - название кнопки
             //локатор кнопки
-            aux.ControlClick(WINTITLE, "", "WindowsForms10.BUTTON.app.0.1114f8110");
+            aux.ControlClick(WINTITLE, "", "WindowsForms10.BUTTON.app.0.2c908d510");
         }
 
         public GroupHelper Groups
